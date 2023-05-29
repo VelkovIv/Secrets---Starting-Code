@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-var secret = 'Thisisourlittelesecret.' // process.env.SOME_LONG_UNGUESSABLE_STRING;
+var secret = 'Thisisourlittelesecret.'; // process.env.SOME_LONG_UNGUESSABLE_STRING;
 userSchema.plugin(encrypt, { secret: secret, encryptedFields: ['password'] });
 
 
